@@ -1,16 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+
   <ItemGroup>
-    <FrameworkReference Include="Microsoft.AspNetCore.App"></FrameworkReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.3.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\eProjectNetCore.Application\eProjectNetCore.Application.csproj" />
     <ProjectReference Include="..\eProjectNetCore.Data\eProjectNetCore.Data.csproj" />
     <ProjectReference Include="..\eProjectNetCore.Utilities\eProjectNetCore.Utilities.csproj" />
     <ProjectReference Include="..\eProjectNetCore.ViewModels\eProjectNetCore.ViewModels.csproj" />
   </ItemGroup>
+
+
 
 </Project>
