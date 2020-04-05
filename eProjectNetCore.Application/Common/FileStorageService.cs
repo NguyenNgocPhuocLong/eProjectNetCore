@@ -24,6 +24,10 @@ namespace eProjectNetCore.Application.Common
 
         public async Task SaveFileAsync(Stream mediaBinaryStream, string fileName)
         {
+            if (!Directory.Exists(_userContentFolder))
+            {
+                Directory.CreateDirectory(_userContentFolder);
+            }
             var filePath = Path.Combine(_userContentFolder, fileName);
             using var output = new FileStream(filePath, FileMode.Create);
             await mediaBinaryStream.CopyToAsync(output);
