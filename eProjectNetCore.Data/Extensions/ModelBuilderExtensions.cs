@@ -102,13 +102,13 @@ namespace eProjectNetCore.Data.Extensions
                 Id = adminId,
                 UserName = "admin",
                 NormalizedUserName = "admin",
-                Email = "tedu.international@gmail.com",
-                NormalizedEmail = "tedu.international@gmail.com",
+                Email = "ngoclong@gmail.com",
+                NormalizedEmail = "ngoclong@gmail.com",
                 EmailConfirmed = true,
                 PasswordHash = hasher.HashPassword(null, "Abcd1234$"),
                 SecurityStamp = string.Empty,
-                FirstName = "Toan",
-                LastName = "Bach",
+                FirstName = "Nguyen",
+                LastName = "Long",
                 Dob = new DateTime(2020, 01, 31)
             });
 
