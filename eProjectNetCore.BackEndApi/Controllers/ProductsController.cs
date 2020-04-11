@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using eProjectNetCore.Application.Catalog.Products;
 using eProjectNetCore.ViewModels.Catalog.ProductImages;
 using eProjectNetCore.ViewModels.Catalog.Products;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace eProjectNetCore.BackEndApi.Controllers
@@ -44,6 +45,7 @@ namespace eProjectNetCore.BackEndApi.Controllers
         #region managed api
 
         [HttpGet("{productId}/{languageId}")]
+        [Authorize]
         public async Task<IActionResult> GetById(int productId, string languageId)
         {
             var product = await _manageProductService.GetById(productId, languageId);
